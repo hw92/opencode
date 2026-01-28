@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenCode Learning Documentation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: linear-gradient(180deg, #1a1a2e 0%, #0d1117 100px);
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #58a6ff;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: #8b949e;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .section {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #21262d;
+    }
+    li:last-child { border-bottom: none; }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .desc {
+      color: #8b949e;
+      font-size: 0.85rem;
+      margin-left: 0.5rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .core { background: #238636; color: white; }
+    .pkg { background: #1f6feb; color: white; }
+    .pattern { background: #8957e5; color: white; }
+    .stats {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: #21262d;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    .stat-num { color: #58a6ff; font-weight: bold; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #30363d;
+      color: #8b949e;
+      font-size: 0.8rem;
+    }
+    footer a { color: #8b949e; }
+  </style>
+</head>
+<body>
+  <h1>OpenCode Learning Documentation</h1>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-num">32</span> Documents</div>
+    <div class="stat"><span class="stat-num">15</span> Packages Covered</div>
+    <div class="stat"><span class="stat-num">Jan 2026</span> Created</div>
+  </div>
+
+  <h2>Architecture Overview</h2>
+  <div class="section">
+    <ul>
+      <li><a href="2026-01-22-opencode-architecture-overview.md">OpenCode Architecture Overview</a> <span class="desc">- 4-layer architecture diagram and mental model</span></li>
+      <li><a href="2026-01-22-monorepo-packages-guide.md">Monorepo Packages Guide</a> <span class="desc">- Index of all 15 packages</span></li>
+      <li><a href="2026-01-18-opencode-architecture-study.md">Architecture Study (Initial)</a> <span class="desc">- Early exploration notes</span></li>
+    </ul>
+  </div>
+
+  <h2>Core Engine (packages/opencode)</h2>
+  <div class="section">
+    <ul>
+      <li><a href="2026-01-22-execution-loop-deep-dive.md">Execution Loop</a> <span class="badge core">CORE</span> <span class="desc">- prompt.ts, processor.ts, llm.ts</span></li>
+      <li><a href="2026-01-18-22-session-prompt-study.md">Session & Prompt Study</a> <span class="badge core">CORE</span> <span class="desc">- Earlier session exploration</span></li>
+      <li><a href="2026-01-18-14-agent-system-study.md">Agent System Study</a> <span class="badge core">CORE</span> <span class="desc">- Agent architecture</span></li>
+      <li><a href="2026-01-22-storage-persistence-layer.md">Storage & Persistence</a> <span class="desc">- Session storage, file formats</span></li>
+      <li><a href="2026-01-22-plugin-system-deep-dive.md">Plugin System</a> <span class="desc">- Custom tools and agents</span></li>
+      <li><a href="2026-01-22-mcp-integration-deep-dive.md">MCP Integration</a> <span class="desc">- Model Context Protocol</span></li>
+      <li><a href="2026-01-22-bus-events-system.md">Bus & Events System</a> <span class="desc">- Event-driven architecture</span></li>
+      <li><a href="2026-01-22-cli-tui-deep-dive.md">CLI & TUI</a> <span class="desc">- Terminal UI with Ink</span></li>
+      <li><a href="2026-01-22-share-system-deep-dive.md">Share System</a> <span class="desc">- Session sharing</span></li>
+      <li><a href="2026-01-22-snapshot-system-deep-dive.md">Snapshot System</a> <span class="desc">- File system rollback</span></li>
+      <li><a href="2026-01-22-file-operations-deep-dive.md">File Operations</a> <span class="desc">- Read, Edit, Write tools</span></li>
+      <li><a href="2026-01-22-server-api-deep-dive.md">Server & API</a> <span class="desc">- Hono HTTP server</span></li>
+      <li><a href="2026-01-22-provider-system-deep-dive.md">Provider System</a> <span class="desc">- 20+ LLM providers</span></li>
+      <li><a href="2026-01-22-config-system-deep-dive.md">Config System</a> <span class="desc">- 6-layer configuration</span></li>
+      <li><a href="2026-01-22-lsp-integration-deep-dive.md">LSP Integration</a> <span class="desc">- 45+ language servers</span></li>
+      <li><a href="2026-01-22-permission-system-deep-dive.md">Permission System</a> <span class="desc">- Rule-based access control</span></li>
+      <li><a href="2026-01-22-auth-system-deep-dive.md">Auth System</a> <span class="desc">- OAuth, API keys, PKCE</span></li>
+    </ul>
+  </div>
+
+  <h2>Other Packages</h2>
+  <div class="section">
+    <ul>
+      <li><a href="2026-01-22-sdk-package-deep-dive.md">SDK Package</a> <span class="badge pkg">PKG</span> <span class="desc">- TypeScript client library</span></li>
+      <li><a href="2026-01-22-enterprise-package-deep-dive.md">Enterprise Package</a> <span class="badge pkg">PKG</span> <span class="desc">- Session sharing & replay</span></li>
+      <li><a href="2026-01-22-ui-package-deep-dive.md">UI Package</a> <span class="badge pkg">PKG</span> <span class="desc">- 45+ Solid.js components</span></li>
+      <li><a href="2026-01-22-util-package-deep-dive.md">Util Package</a> <span class="badge pkg">PKG</span> <span class="desc">- Shared utilities, NamedError</span></li>
+      <li><a href="2026-01-22-console-package-deep-dive.md">Console Package</a> <span class="badge pkg">PKG</span> <span class="desc">- Admin dashboard</span></li>
+      <li><a href="2026-01-22-tauri-desktop-app-deep-dive.md">Tauri Desktop App</a> <span class="badge pkg">PKG</span> <span class="desc">- Native desktop wrapper</span></li>
+      <li><a href="2026-01-22-slack-bot-deep-dive.md">Slack Bot</a> <span class="badge pkg">PKG</span> <span class="desc">- Slack integration</span></li>
+      <li><a href="2026-01-22-serverless-functions-deep-dive.md">Serverless Functions</a> <span class="badge pkg">PKG</span> <span class="desc">- Cloudflare Workers</span></li>
+    </ul>
+  </div>
+
+  <h2>Patterns & Techniques</h2>
+  <div class="section">
+    <ul>
+      <li><a href="2026-01-22-instance-context-patterns.md">Instance & Context Patterns</a> <span class="badge pattern">PATTERN</span> <span class="desc">- Factory pattern usage</span></li>
+      <li><a href="2026-01-22-zod-schemas-patterns.md">Zod Schema Patterns</a> <span class="badge pattern">PATTERN</span> <span class="desc">- Type-safe validation</span></li>
+      <li><a href="2026-01-22-streaming-patterns.md">Streaming Patterns</a> <span class="badge pattern">PATTERN</span> <span class="desc">- SSE, async iterators</span></li>
+    </ul>
+  </div>
+
+  <h2>Other</h2>
+  <div class="section">
+    <ul>
+      <li><a href="2026-01-17-git-workflow.md">Git Workflow</a> <span class="desc">- Development workflow notes</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    Generated by Claude (Opus 4.5) | 2026-01-22 |
+    <a href="https://github.com/anthropics/opencode">OpenCode Repository</a>
+  </footer>
+</body>
+</html>
