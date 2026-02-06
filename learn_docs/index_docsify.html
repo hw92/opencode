@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode Learning Documentation</title>
+    <meta name="description" content="OpenCode Architecture & Design Documentation">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/simple.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
+    <style>
+        :root {
+            --primary-color: #16A34A;
+            --base-font-size: 15px;
+            --text-color: #2c3e50;
+            --border-color: #e0e0e0;
+            --background-color: #ffffff;
+        }
+
+        body,
+        #app {
+            background: #ffffff !important;
+            color: #2c3e50;
+        }
+
+        .sidebar {
+            background: #ffffff;
+        }
+
+        .sidebar>h1 {
+            color: #16A34A;
+        }
+
+        .sidebar a {
+            color: #555;
+        }
+
+        .sidebar a.active {
+            color: #16A34A;
+            background: #f0f8f0;
+        }
+
+        section.content {
+            background: #ffffff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            border-bottom: 2px solid #16A34A;
+        }
+
+        p {
+            color: #2c3e50;
+        }
+
+        code {
+            background: #f5f5f5;
+            color: #d63384;
+        }
+
+        pre {
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        a {
+            color: #16A34A;
+        }
+
+        /* Coverpage fixes */
+        section.cover {
+            background: linear-gradient(to left bottom, hsl(142, 76%, 36%) 0%, hsl(142, 72%, 29%) 100%) !important;
+            background-image: none !important;
+            color: #fff !important;
+            min-height: 100vh;
+        }
+
+        section.cover::before,
+        section.cover::after {
+            display: none !important;
+        }
+
+        section.cover .mask {
+            display: none !important;
+        }
+
+        section.cover h1,
+        section.cover .cover-main h1 {
+            color: #fff !important;
+        }
+
+        section.cover p,
+        section.cover .cover-main>p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        section.cover blockquote,
+        section.cover blockquote p {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        section.cover ul,
+        section.cover ul li {
+            color: #fff !important;
+        }
+
+        section.cover a:not(.button) {
+            color: #fff !important;
+        }
+
+        section.cover .cover-main>p:last-child a {
+            background-color: #fff !important;
+            color: #16A34A !important;
+            border: none !important;
+            padding: 0.75em 2em !important;
+            border-radius: 2em !important;
+            text-decoration: none !important;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        section.cover .cover-main>p:last-child a:hover {
+            background-color: #f0f0f0 !important;
+        }
+
+        .github-corner {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .github-corner svg {
+            width: 80px !important;
+            height: 80px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            basePath: '/',
+            name: 'OpenCode Learning Docs',
+            repo: 'https://github.com/hw92/opencode',
+            homepage: 'README.md',
+            loadSidebar: '_sidebar.md',
+            coverpage: false,
+            maxLevel: 3,
+            subMaxLevel: 3,
+            notFoundPage: true,
+            auto2top: true,
+            search: 'auto',
+            themeColor: '#16A34A'
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+</body>
+
+</html>
